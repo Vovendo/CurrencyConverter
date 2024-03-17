@@ -1,0 +1,33 @@
+version: '2.3'
+
+services:
+  app:
+    image: 'currencyconverter'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/CurrencyConverter
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=validate
+    ports:
+      - "8080:8080"
+
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    healthcheck:
+      test: pg_isready -d CurrencyConverter -U postgres
+      interval: 5s
+      timeout: 10s
+      retries: 50
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=CurrencyConverter
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres

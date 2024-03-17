@@ -1,0 +1,102 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-currency
+      author: vladimir
+      changes:
+        - sql:
+            dbms: 'postgresql'
+            sql: |
+              insert into country (id, name) 
+              values
+              (1, 'united-states'),
+              (2, 'china'), 
+              (3, 'european-union'),
+              (4, 'japan'),
+              (5, 'russian-federation'),
+              (6, 'germany'),
+              (7, 'india'),
+              (8, 'united-kingdom'),
+              (9, 'brazil'),
+              (10, 'canada'),
+              (11, 'france'),
+              (12, 'italy'),
+              (13, 'saudi-arabia'),
+              (14, 'argentina'),
+              (24, 'jamaica'),
+              (25, 'mexico'),
+              (30, 'peru'),
+              (38, 'venezuela'),
+              (40, 'angola'),
+              (42, 'botswana'),
+              (52, 'egypt'),
+              (55, 'ethiopia'),
+              (58, 'ghana'),
+              (62, 'kenya'),
+              (67, 'malawi'),
+              (71, 'morocco'),
+              (72, 'mozambique'),
+              (73, 'namibia'),
+              (75, 'nigeria'),
+              (77, 'rwanda'),
+              (80, 'seychelles'),
+              (83, 'south-africa'),
+              (86, 'tanzania'),
+              (87, 'togo'),
+              (88, 'tunisia'),
+              (89, 'uganda'),
+              (90, 'zambia'),
+              (91, 'zimbabwe'),
+              (96, 'bangladesh'),
+              (105, 'indonesia'),
+              (108, 'israel'),
+              (112, 'kuwait'),
+              (117, 'malaysia'),
+              (122, 'oman'),
+              (123, 'pakistan'),
+              (125, 'philippines'),
+              (126, 'qatar'),
+              (128, 'singapore'),
+              (129, 'south-korea'),
+              (130, 'sri-lanka'),
+              (132, 'taiwan'),
+              (134, 'thailand'),
+              (136, 'united-arab-emirates'),
+              (138, 'vietnam'),
+              (140, 'australia'),
+              (145, 'new-zealand'),
+              (156, 'austria'),
+              (158, 'belgium'),
+              (162, 'cyprus'),
+              (163, 'czechia'),
+              (164, 'denmark'),
+              (165, 'estonia'),
+              (168, 'finland'),
+              (172, 'greece'),
+              (174, 'hungary'),
+              (175, 'iceland'),
+              (176, 'ireland'),
+              (178, 'latvia'),
+              (180, 'lithuania'),
+              (181, 'luxembourg'),
+              (186, 'netherlands'),
+              (188, 'norway'),
+              (189, 'poland'),
+              (190, 'portugal'),
+              (191, 'romania'),
+              (194, 'serbia'),
+              (195, 'slovakia'),
+              (197, 'spain'),
+              (198, 'sweden'),
+              (199, 'switzerland'),
+              (200, 'turkey'),
+              (201, 'ukraine')
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              

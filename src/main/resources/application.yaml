@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/CurrencyConverter
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        hbm2ddl.auto: validate
+api-key: 57bae4865c404ece805e721a2645503a
+bot-username: convert_your_currency_bot
+bot-token: 6821973539:AAEim_6hY25nPXinqFD2-SzaZWBvpy1qG4w
